@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 8772494169209459459}
   - component: {fileID: 939665649415349282}
   m_Layer: 0
-  m_Name: Plataform C
+  m_Name: Platform C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalPoint: {fileID: 5091453813688421807}
+  spawnObj: {fileID: 0}
 --- !u!1 &7727163424271005271
 GameObject:
   m_ObjectHideFlags: 0
