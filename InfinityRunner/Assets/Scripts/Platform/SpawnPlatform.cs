@@ -39,7 +39,7 @@ public class SpawnPlatform : MonoBehaviour
     {
         float distance =  player.position.x - currentPlatformPoint.position.x;
 
-        if(distance >= 6)
+        if(distance >= 6    )
         {
             Recycle(currentPlatforms[platformIndex].gameObject);
             platformIndex++;
@@ -56,6 +56,10 @@ public class SpawnPlatform : MonoBehaviour
     public void Recycle(GameObject platform)
     {
         platform.transform.position = new Vector2(offset, -4.5f);
+        if (platform.GetComponent<Platform>().spawnObj != null)
+        {
+        platform.GetComponent<Platform>().spawnObj.RecycleSpawn();
+        }
         offset += 30f;
     }
 }

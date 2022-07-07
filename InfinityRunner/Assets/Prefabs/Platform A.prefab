@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3093876561193896645}
   - component: {fileID: 4057081825896579736}
   m_Layer: 0
-  m_Name: Plataform A
+  m_Name: Platform A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalPoint: {fileID: 5460699243741024356}
+  spawnObj: {fileID: 0}
 --- !u!1 &3093876562358223912
 GameObject:
   m_ObjectHideFlags: 0
