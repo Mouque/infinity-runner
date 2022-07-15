@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     {
         if(collision.CompareTag("Bullet"))
         {
+            collision.GetComponent<Projectile>().OnHit();
             ApplyDamage(collision.GetComponent<Projectile>().damage);
         }
     }

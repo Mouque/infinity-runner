@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    public int health;
     private Rigidbody2D rig;
     public Animator anim;
 
@@ -30,17 +30,40 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            PlayerJump();
+        }
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            PlayerShoot();
+        }
+    }
+
+    public void PlayerJump()
+    {
+        if (!isJumping)
         {
             rig.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             anim.SetBool("Jumping", true);
             isJumping = true;
 
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Z))
+    public void PlayerShoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+    }
+
+    public void OnHit(int dmg)
+    {
+        health -= dmg;
+
+        if(health <= 0)
         {
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            GameController.instance.ShowGameOver();
         }
     }
 
