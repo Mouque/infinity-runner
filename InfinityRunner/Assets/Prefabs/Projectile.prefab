@@ -138,3 +138,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   damage: 2
+  expPrefab: {fileID: 1393219648087455509, guid: d4e0ac1633bad3c4b98193a6691cdeef, type: 3}
